@@ -4,6 +4,8 @@ import App from 'components/App';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
+// As the function name indicates before each test
+// we are going to initialze our 'wrapped' component
 let wrapped;
 beforeEach(() => {
 	wrapped = shallow(<App />);
