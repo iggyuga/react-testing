@@ -8,7 +8,8 @@ beforeEach(() => {
 	wrapped = mount(
 	<Root>
 		<CommentBox />
-	</Root>);
+	</Root>
+	);
 });
 
 afterEach(() => {
