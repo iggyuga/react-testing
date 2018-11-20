@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Root from 'Root';
 import App from 'components/App';
-import moxios from "moxios";
+import moxios from 'moxios';
 
 let wrapped;
 // Setup moxios, intercept any request from axios
@@ -41,7 +41,7 @@ it('can fetch a list of comments and display them', (done) => {
         // expect to find a list of comments
         expect(wrapped.find('li').length).toEqual(2);
         done();
-        //wrapped.unmount();
+        //wrapped.unmount
     });
 
 
