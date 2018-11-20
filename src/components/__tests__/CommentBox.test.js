@@ -16,9 +16,9 @@ afterEach(() => {
 	wrapped.unmount();
 });
 
-it('has a text area and a button', () => {
+it('has a text area and 2 buttons', () => {
 	expect(wrapped.find('textarea').length).toEqual(1);
-	expect(wrapped.find('button').length).toEqual(1);
+	expect(wrapped.find('button').length).toEqual(2);
 });
 
 //describe can be used to group sets of tests that have common setup
