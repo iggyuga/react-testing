@@ -38,5 +38,5 @@ class CommentBox extends Component {
 }
 
 // Here our mapStateToProps is coming from our higher order component,
-// also we need to pass our actions and history
+// also we need to pass our actions and history (as props)
 export default connect(null, actions)(requireAuth(CommentBox));

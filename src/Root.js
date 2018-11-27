@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from "redux";
-import reduxPromise from 'redux-promise';
+import async from 'middlewares/async';
+import stateValidator from 'middlewares/stateValidator';
 import reducers from 'reducers';
 
 // The purpose of this file is to provide a way
@@ -12,10 +13,13 @@ import reducers from 'reducers';
 // it will be defined from the props, as long as redux is hooked up
 
 // we can now use async action creators
+
+// Side note: Middleware: allows us to inspect actions
+// that have been returned from a 'action creator'
 export default ({ children, initialState = {} }) => {
 	const store = createStore(reducers,
 		initialState,
-		applyMiddleware(reduxPromise)
+		applyMiddleware(stateValidator, async)
 	);
 	return (
 		<Provider store={store}>

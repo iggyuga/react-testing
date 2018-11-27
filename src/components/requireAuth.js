@@ -24,8 +24,10 @@ export default (ChildComponent) => {
             }
         }
 
+        // Important! this passes any props from the higher order component 
+        // (parent) to the child component
         render() {
-            return <ChildComponent />;
+            return <ChildComponent  {...this.props} />;
         }
     }
 
